@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer Archivos de Excel</title>
+    <!-- Incluye Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluye Sortable.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <style>
+        .no-drag {
+    pointer-events: none;
+}
+
+    </style>
+    <style>
+        .separator-row {
+            height: 20px;
+            background-color: #f1f1f1;
+        }
+        .total-hours {
+            font-weight: bold;
+            color: red;
+        }
+        .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-header .d-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card-header .btn-link {
+    margin-left: 10px; /* Ajusta según sea necesario */
+}
+
+.table-container {
+    overflow-x: auto; /* Para que la tabla se ajuste si es demasiado ancha */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Leer Archivos de Excel con HTML y JavaScript</h1>
+        <div class="mb-3">
+            <input type="file" id="input-excel" class="form-control-file" />
+        </div>
+        <div class="accordion" id="accordionExample"></div>
+    </div>
+
+    <!-- Incluye la biblioteca SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- Incluye Moment.js para el cálculo de tiempo -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Incluye Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="fileHandler.js"></script>
+    <script src="accordionRenderer.js"></script>
+    <script src="recordOperations.js"></script>
+    <script src="timeCalculations.js"></script>
+</body>
+</html>
