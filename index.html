@@ -10,6 +10,19 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Incluye Sortable.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <style>
+        .dropzone {
+            border: 2px dashed #007bff;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .dropzone.dragover {
+            background-color: #e9ecef;
+        }
+    </style>
     <style>
         .no-drag {
             pointer-events: none;
@@ -79,13 +92,33 @@
     <!-- Contenido principal -->
     <div class="container mt-4">
         <div id="inputContainer" class="mb-3">
-            <h1>Leer Archivos de Excel con HTML y JavaScript</h1>
-            <input type="file" id="input-excel" class="form-control-file" />
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h4>Sube el archivo Excel</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="dropzone" id="dropzone">
+                                    <i class="fas fa-cloud-upload-alt fa-3x mb-3"></i>
+                                    <h5>Arrastra y suelta el archivo aqui</h5>
+                                    <p>o Cick para seleccionarlo</p>
+                                    <input type="file" id="input-excel"class="d-none" multiple>
+                                </div>
+                                <div id="fileList" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="accordionContainer" class="d-none">
             <div class="accordion" id="accordionExample"></div>
         </div>
     </div>
+
+
     
     <!-- Offcanvas -->
     <div class="offcanvas offcanvas-end offcanvas-half" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
